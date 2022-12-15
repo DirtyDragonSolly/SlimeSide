@@ -1,12 +1,10 @@
-﻿using Palmmedia.ReportGenerator.Core.Reporting.Builders;
-using System.Threading;
-using Unity.VisualScripting;
+﻿using System.Threading;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Player : Positive
 {
 	[Header("Individual Characteristics")]
+	public float startMaxHealth = 100;
 	public float hpRegen;
 
 	[Header("Currency")]
@@ -92,7 +90,7 @@ public class Player : Positive
 	}
 	public float MaxHealth()
 	{
-		return maxHealth + healthLevel * _healthPerLevel;
+		return maxHealth = startMaxHealth + healthLevel * _healthPerLevel;
 	}
 
 	//Levels
